@@ -27,14 +27,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-youtube-v2`,
-      options: {
-        channelId: [`UCWO4zdPrQ4RbA7x1-vRaq5w`],
-        apiKey: `AIzaSyDbs3OjmBfyIFuow9BlHaRyKChQyAZjQOY`,
-        maxVideos: 50 // Defaults to 50
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
