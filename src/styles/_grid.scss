@@ -1,0 +1,92 @@
+$grid_debug: false;
+
+$grid_debug_settings: (container_colour: blue, cell_colour: yellow);
+
+$grid_settings: (columns: 12, width: 100vw, gutter_width: 1rem);
+
+@mixin grid($width: map-get($grid_settings, width)) {
+  display: flex;
+  width: $width;
+  @if $grid_debug {
+    outline: 1px dashed map-get($grid_debug_settings, container_colour);
+  }
+}
+
+@mixin grid_align($vertical: "top", $horizontal: "left", $direction: row) {
+  @if $vertical == "top" {
+    justify-content: flex-start;
+  } @else if $vertical == "middle" {
+    justify-content: center;
+  } @else if $vertical == "bottom" {
+    justify-content: "bottom";
+  } @else {
+    justify-content: flex-start;
+  }
+
+  @if $horizontal == "left" {
+    align-items: flex-start;
+  } @else if $horizontal == "middle" {
+    align-items: center;
+  } @else if $horizontal == "right" {
+    align-items: flex-end;
+  } @else if $horizontal == "edge" {
+    align-items: space-between;
+  } @else if $horizontal == "even" {
+    align-items: space-around;
+  }
+
+  @if $direction == "row" {
+    flex-direction: row;
+  } @else if $direction == "column" {
+    flex-direction: column;
+  }
+}
+
+@mixin grid_cell($length: "auto", $gutter: true) {
+  @if $length != "auto" {
+    width: (100% / map-get($grid_settings, columns)) * $length;
+    flex-basis: (100% / map-get($grid_settings, columns)) * $length;
+  }
+
+  @if $gutter {
+    margin-right: map-get($grid_settings, gutter_width);
+    margin-left: map-get($grid_settings, gutter_width);
+  }
+
+  @if $grid_debug {
+    outline: 1px dashed map-get($grid_debug_settings, cell_colour);
+  }
+
+  // IE Fix
+  > * {
+    align-self: stretch;
+  }
+}
+
+@mixin grid_cell_align($vertical: "top") {
+  @if $vertical == "top" {
+    align-self: flex-start;
+  } @else if $vertical == "middle" {
+    align-self: center;
+  } @else if $vertical == "bottom" {
+    align-self: flex-end;
+  } @else {
+    align-self: center;
+  }
+}
+
+@if $grid_debug {
+  .grid-row {
+    @include grid(100vw);
+    height: 20vh;
+  }
+  @for $i from 1 through map-get($grid_settings, columns) {
+    .grid-cell-#{$i} {
+      @include grid_cell($i, true);
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+}

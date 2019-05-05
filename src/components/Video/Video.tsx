@@ -1,18 +1,24 @@
-import React from "react"
-import YouTube from "react-youtube"
+import * as React from "react";
+import classnames from "classnames";
+import YouTube from "react-youtube";
+
+import "./Video.scss";
 
 interface VideoProps {
   id: string;
+  className?: string;
 }
 
 const Video = (props: VideoProps) => {
   const opts = {
-    playerVars: {
-      
-    },
-  }
+    width: "100%"
+  };
 
-  return <YouTube videoId={props.id} opts={opts} />
-}
+  return (
+    <div className={classnames("video__container", props.className)}>
+      <YouTube videoId={props.id} opts={opts} />
+    </div>
+  );
+};
 
-export default Video
+export default Video;

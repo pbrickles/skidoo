@@ -7,9 +7,11 @@
 
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import "typeface-limelight";
+import "typeface-josefin-slab";
 
 import Header from "./header";
-import "./layout.css";
+import "../styles/index.scss";
 
 const Layout = (props: { children: React.ReactNode}) => {
   const { children } = props;

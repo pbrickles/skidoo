@@ -1,0 +1,21 @@
+@import "./media-queries";
+@import "./grid";
+
+.home {
+  &__intro,
+  &__video {
+    @include breakpoint($lg) {
+      @include grid();
+      @include grid_cell(10);
+      margin: 0 auto;
+    }
+  }
+
+  &__intro {
+    margin-bottom: 2rem;
+  }
+
+  &__video {
+    display: block;
+  }
+}
