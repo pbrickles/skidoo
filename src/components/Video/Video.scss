@@ -2,4 +2,8 @@
 
 .video__container {
   border: 6px solid $white;
+
+  iframe {
+    margin-bottom: -8px;
+  }
 }
