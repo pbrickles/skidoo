@@ -11,7 +11,8 @@ interface VideoProps {
 
 const Video = (props: VideoProps) => {
   const opts = {
-    width: "100%"
+    width: "100%",
+    height: "400px"
   };
 
   return (
