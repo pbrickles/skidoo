@@ -10,7 +10,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import "typeface-limelight";
 import "typeface-josefin-slab";
 
-import Header from "./header";
+import SiteHeader from "./SiteHeader/SiteHeader";
 import "../styles/index.scss";
 
 const Layout = (props: { children: React.ReactNode}) => {
@@ -27,8 +27,9 @@ const Layout = (props: { children: React.ReactNode}) => {
     `)
     return (
       <>
-        <Header siteTitle={site.siteMetadata.title} />
+        <SiteHeader siteTitle={site.siteMetadata.title} />
         <div
+        className="layout"
           style={{
             margin: `0 auto`,
             maxWidth: 960,

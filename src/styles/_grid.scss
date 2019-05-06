@@ -1,12 +1,15 @@
+@import "./variables";
+
 $grid_debug: false;
 
 $grid_debug_settings: (container_colour: blue, cell_colour: yellow);
 
-$grid_settings: (columns: 12, width: 100vw, gutter_width: 1rem);
+$grid_settings: (columns: 12, width: 100%, gutter_width: 1rem);
 
 @mixin grid($width: map-get($grid_settings, width)) {
   display: flex;
   width: $width;
+  max-width: $contentMaxWidth;
   @if $grid_debug {
     outline: 1px dashed map-get($grid_debug_settings, container_colour);
   }
@@ -87,6 +90,24 @@ $grid_settings: (columns: 12, width: 100vw, gutter_width: 1rem);
       margin-top: 10px;
       margin-bottom: 10px;
       text-align: center;
+    }
+  }
+}
+
+.fifty-fifty {
+  @include grid();
+  flex-direction: column;
+  max-width: $contentMaxWidth;
+
+  @include breakpoint($lg) {
+    flex-direction: row;
+  }
+
+  &__left,
+  &__right {
+    @include grid-cell();
+    @include breakpoint($lg) {
+      @include grid-cell(6);
     }
   }
 }

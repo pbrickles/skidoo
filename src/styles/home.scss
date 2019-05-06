@@ -1,21 +1,63 @@
 @import "./media-queries";
 @import "./grid";
+@import "./variables";
 
 .home {
   &__intro,
   &__video {
-    @include breakpoint($lg) {
-      @include grid();
-      @include grid_cell(10);
-      margin: 0 auto;
-    }
+    @include grid();
+    width: 100%;
   }
 
   &__intro {
     margin-bottom: 2rem;
+    max-width: $contentMaxWidth;
+
+    @include breakpoint($md) {
+      font-size: 2rem;
+      line-height: 1.1;
+      text-align: center;
+    }
   }
 
   &__video {
     display: block;
+
+    &-embed {
+      @include grid-cell();
+
+      @include breakpoint($md) {
+        @include grid-cell(10);
+      }
+      margin: 0 auto;
+    }
+  }
+
+  &__description {
+    margin: 2rem 0;
+
+    .fifty-fifty__right {
+      display: block;
+    }
+  }
+
+  &__soundcloud {
+    @include grid();
+
+    iframe {
+      @include grid-cell(12);
+      margin-bottom: 2rem;
+      border: 0;
+    }
+  }
+
+  &__image-container {
+    @include grid();
+    display: block;
+    padding: 0 1rem;
+
+    picture, img {
+      border: 6px solid $white;
+    }
   }
 }
