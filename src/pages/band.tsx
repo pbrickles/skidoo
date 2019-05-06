@@ -14,7 +14,6 @@ const IndexPage = () => {
         description="52 Skidoo are a three piece Harlem swing band that have turned back the clock to play a dazzling set of vintage American music."
         lang="en"
       />
-      
     </Layout>
   );
 };

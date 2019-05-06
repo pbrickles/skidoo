@@ -25,11 +25,12 @@
 
     &-embed {
       @include grid-cell();
+      margin: 0 auto;
 
       @include breakpoint($md) {
         @include grid-cell(10);
+        margin: 0 auto;
       }
-      margin: 0 auto;
     }
   }
 

@@ -33,6 +33,7 @@ const IndexPage = (props: IndexPageProps) => {
 
       <div className="home__description fifty-fifty">
         <div className="fifty-fifty__left">
+          <h2>52 Skid-who?</h2>
           <p>
             52 Skidoo are a three piece Harlem swing band that have turned back
             the clock to play a dazzling set of vintage American music.

@@ -11,12 +11,13 @@ import "typeface-limelight";
 import "typeface-josefin-slab";
 
 import SiteHeader from "./SiteHeader/SiteHeader";
+import SiteFooter from "./SiteFooter/SiteFooter";
 import "../styles/index.scss";
 
-const Layout = (props: { children: React.ReactNode}) => {
+const Layout = (props: { children: React.ReactNode }) => {
   const { children } = props;
   const { site } = useStaticQuery(
-  graphql`
+    graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
@@ -24,23 +25,25 @@ const Layout = (props: { children: React.ReactNode}) => {
           }
         }
       }
-    `)
-    return (
-      <>
-        <SiteHeader siteTitle={site.siteMetadata.title} />
-        <div
+    `
+  );
+  return (
+    <>
+      <SiteHeader siteTitle={site.siteMetadata.title} />
+      <div
         className="layout"
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>52 Skidoo</footer>
-        </div>
-      </>
-    )}
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0px 1.0875rem 1.45rem`,
+          paddingTop: 0,
+        }}
+      >
+        <main>{children}</main>
+        <SiteFooter />
+      </div>
+    </>
+  );
+};
 
 export default Layout;
