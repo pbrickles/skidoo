@@ -1,7 +1,8 @@
 @import "../../styles/variables";
 
 .video__container {
-  border: 6px solid $white;
+  border: $borderWidth solid $white;
+  border-radius: $borderRadius;
 
   iframe {
     margin-bottom: -8px;

@@ -49,6 +49,7 @@
       @include grid-cell(12);
       margin-bottom: 2rem;
       border: 0;
+      border-radius: $borderRadius;
     }
   }
 
@@ -58,7 +59,8 @@
     padding: 0 1rem;
 
     picture, img {
-      border: 6px solid $white;
+      border: $borderWidth solid $white;
+      border-radius: $borderRadius;
     }
   }
 }

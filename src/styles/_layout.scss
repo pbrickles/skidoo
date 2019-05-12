@@ -231,6 +231,9 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+picture, img {
+  border-radius: $borderRadius
+}
 h1 {
   margin-left: 0;
   margin-right: 0;
