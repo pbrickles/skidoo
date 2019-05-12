@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+@import "../../styles/type";
+
+blockquote {
+  margin: 0 auto;
+  font-family: 'Limelight', cursive;
+  font-size: 1.25rem;
+  color: $white;
+}
+
+cite {
+  display: block;
+  font-family: 'Josefin Slab', serif;
+  font-size: 0.875rem;
+}

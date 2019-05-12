@@ -3,6 +3,7 @@
 .video__container {
   border: $borderWidth solid $white;
   border-radius: $borderRadius;
+  background-color: rgba($highlight, 0.2);
 
   iframe {
     margin-bottom: -8px;

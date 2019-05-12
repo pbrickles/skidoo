@@ -1,6 +1,6 @@
 import * as React from "react";
 import classnames from "classnames";
-import YouTube from "react-youtube";
+import Spinner from "react-spinkit";
 
 import "./Video.scss";
 
@@ -12,12 +12,16 @@ interface VideoProps {
 const Video = (props: VideoProps) => {
   const opts = {
     width: "100%",
-    height: "400px"
+    height: "400px",
+    src: `https://www.youtube-nocookie.com/embed/${props.id}?rel=0&modestbranding=1&showinfo=0`,
+    allow:
+      "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen",
+      frameborder: 0
   };
 
   return (
     <div className={classnames("video__container", props.className)}>
-      <YouTube videoId={props.id} opts={opts} />
+      <iframe {...opts} />
     </div>
   );
 };
