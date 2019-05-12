@@ -22,6 +22,7 @@ const SiteFooter = () => {
       }
     `
   );
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="footer__inner">
@@ -43,9 +44,13 @@ const SiteFooter = () => {
               </Cta>
             </p>
           </div>
-          
         </div>
         <Nav items={mainNav} />
+      </div>
+      <div className="copyright">
+        <div className="copyright__inner">
+          <p>&copy; {currentYear} 52 Skidoo</p>
+        </div>
       </div>
     </footer>
   );

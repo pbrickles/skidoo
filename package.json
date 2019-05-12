@@ -5,9 +5,6 @@
   "version": "0.1.0",
   "author": "Paul Brickles <pbrickles@gmail.com>",
   "dependencies": {
-    "@types/classnames": "^2.2.7",
-    "@types/react-helmet": "^5.0.8",
-    "@types/react-youtube": "^7.6.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.3.34",
     "gatsby-image": "^2.0.41",
@@ -24,14 +21,17 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "react-youtube": "^7.9.0",
+    "react-spinkit": "^3.0.0",
     "typeface-josefin-slab": "^0.0.72",
     "typeface-limelight": "^0.0.72"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.7",
+    "@types/react-helmet": "^5.0.8",
     "@types/node": "^10.3.1",
     "@types/react": "^16.8.16",
     "@types/react-dom": "^16.8.4",
+    "@types/react-spinkit": "^3.0.5",
     "prettier": "^1.17.0",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",

@@ -1,0 +1,39 @@
+@import "./media-queries";
+@import "./grid";
+@import "./variables";
+
+.band {
+  &__intro {
+    @include grid();
+  }
+  &__intro-inner {
+    @include grid-cell(12);
+  }
+  &__intro-text {
+    margin-top: 2rem;
+
+    p:first-child {
+      margin-bottom: 2rem;
+      max-width: $contentMaxWidth;
+
+      @include breakpoint($md) {
+        font-size: 2rem;
+        line-height: 1.1;
+        text-align: center;
+      }
+    }
+  }
+
+  &__other {
+    margin: 2rem 0;
+  }
+
+  &__quote {
+    @include grid();
+
+    &-inner {
+      @include grid-cell(12);
+      text-align: center;
+    }
+  }
+}
