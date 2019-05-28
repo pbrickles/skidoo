@@ -16,7 +16,7 @@ const Video = (props: VideoProps) => {
     src: `https://www.youtube-nocookie.com/embed/${props.id}?rel=0&modestbranding=1&showinfo=0`,
     allow:
       "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen",
-      frameborder: 0
+      frameBorder: 0
   };
 
   return (
