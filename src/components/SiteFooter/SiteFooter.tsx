@@ -57,5 +57,3 @@ const SiteFooter = () => {
 };
 
 export default SiteFooter;
-
-// export const pageQuery =
