@@ -1,5 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import Img from "gatsby-image";
 import FiftyFifty from "../components/Grid/FiftFifty";
@@ -23,10 +26,27 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
       />
       <div className="contact">
         <FiftyFifty className="contact__intro">
-        <FiftyFifty side="left">
+          <FiftyFifty side="left">
             <h1>Contact 52 Skidoo</h1>
             <p>Drop the band a line for bookings:</p>
-            <p><a href="mailto:henrybotham@aol.com">Email Henry at henrybotham@aol.com</a></p>
+            <p>
+              <a href="mailto:henrybotham@aol.com">
+                <FontAwesomeIcon icon={faEnvelope} className="contact__icon" />{" "}
+                Email Henry at henrybotham@aol.com
+              </a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/52_skidoo/" target="_blank">
+                <FontAwesomeIcon icon={faInstagram} className="contact__icon" />{" "}
+                52 Skidoo on Instagram
+              </a>
+            </p>
+            <p>
+              <a href="https://www.facebook.com/52skidoo/" target="_blank">
+                <FontAwesomeIcon icon={faFacebook} className="contact__icon" />{" "}
+                52 Skidoo on Facebook
+              </a>
+            </p>
           </FiftyFifty>
           <FiftyFifty side="right">
             <Img fluid={data.contactOne.childImageSharp.fluid} />
