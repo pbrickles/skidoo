@@ -26,7 +26,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
         <FiftyFifty side="left">
             <h1>Contact 52 Skidoo</h1>
             <p>Drop the band a line for bookings:</p>
-            <p><a href="mailto:henrybotham@gmail.com">Email Henry at henrybotham@gmail.com</a></p>
+            <p><a href="mailto:henrybotham@aol.com">Email Henry at henrybotham@aol.com</a></p>
           </FiftyFifty>
           <FiftyFifty side="right">
             <Img fluid={data.contactOne.childImageSharp.fluid} />
