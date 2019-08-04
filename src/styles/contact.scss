@@ -1,0 +1,16 @@
+@import "./media-queries";
+@import "./grid";
+@import "./variables";
+
+.contact {
+  &__intro {
+    @include grid();
+  }
+
+  &__intro-inner {
+    @include grid-cell(12);
+  }
+  &__intro-text {
+    margin-top: 2rem;
+  }
+}

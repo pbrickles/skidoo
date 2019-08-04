@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Tabs from "../components/Tabs/Tabs";
+import FiftyFifty from "../components/Grid/FiftFifty";
 
 import { band as tabsContent } from "../content/band";
 
@@ -43,8 +44,8 @@ const BandPage: React.FC<BandPageProps> = props => {
         </div>
       </div>
       <Tabs content={tabsContent} />
-      <div className="fifty-fifty band__other">
-        <div className="fifty-fifty__left">
+      <FiftyFifty className="band__other">
+        <FiftyFifty side="left">
           <p>
             Other Skidoo performers come and go from gig to gig and are chosen
             based upon sobriety, high speed driving skills, choice of hat and
@@ -61,11 +62,11 @@ const BandPage: React.FC<BandPageProps> = props => {
             vintage/cabaret/speakeasy/1920’s events throughout the UK and
             beyond.
           </p>
-        </div>
-        <div className="fifty-fifty__right">
+        </FiftyFifty>
+        <FiftyFifty side="right">
           <Img fluid={props.data.carChase.childImageSharp.fluid} />
-        </div>
-      </div>
+        </FiftyFifty>
+      </FiftyFifty>
       <div className="band__quote">
         <div className="band__quote-inner">
           <Blockquote

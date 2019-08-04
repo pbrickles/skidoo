@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Video from "../components/Video/Video";
+import FiftyFifty from "../components/Grid/FiftFifty";
 
 import "../styles/home.scss";
 import SoundCloud from "../components/SoundCloud/SoundCloud";
@@ -31,8 +32,8 @@ const IndexPage = (props: IndexPageProps) => {
         <Video id="mN8OJaTvqW0" className="home__video-embed" />
       </div>
 
-      <div className="home__description fifty-fifty">
-        <div className="fifty-fifty__left">
+      <FiftyFifty className="home__description">
+        <FiftyFifty side="left">
           <h2>52 Skid-who?</h2>
           <p>
             52 Skidoo are a three piece Harlem swing band that have turned back
@@ -45,11 +46,11 @@ const IndexPage = (props: IndexPageProps) => {
             like ‘Jeepers Creepers’ , ‘Darktown Strutters Ball’ and ‘I Ain’t Got
             Nobody’ to create an authentic 1920/30’s Harlem party atmosphere.
           </p>
-        </div>
-        <div className="fifty-fifty__right">
+        </FiftyFifty>
+        <FiftyFifty side="right">
           <Img fluid={props.data.homeOne.childImageSharp.fluid} />
-        </div>
-      </div>
+        </FiftyFifty>
+      </FiftyFifty>
       <div className="home__soundcloud">
         <SoundCloud />
       </div>
