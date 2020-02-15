@@ -29,7 +29,7 @@
     "react-spinkit": "^3.0.0",
     "typeface-josefin-slab": "^0.0.72",
     "typeface-limelight": "^0.0.72",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.7",
